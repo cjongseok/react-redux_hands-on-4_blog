@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchPosts, selectPost, deselectPost } from '../actions';
-import { selectedPostsSelector } from '../selectors/selected_posts';
+import selectedPostsSelector from '../selectors/selected_posts';
 
 class PostsIndex extends Component {
 
@@ -74,7 +74,7 @@ function mapStateToProps(state) {
     return {
         posts: state.posts,
         selectedPostIds: state.selectedPostIds,
-        selectedPosts: selectedPostsSelector(state), // <-- Error occurs HERE!
+        selectedPosts: selectedPostsSelector(state),
     }
 }
 
