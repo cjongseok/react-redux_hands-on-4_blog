@@ -74,7 +74,7 @@ function mapStateToProps(state) {
     return {
         posts: state.posts,
         selectedPostIds: state.selectedPostIds,
-        selectedPosts: selectedPostsSelector(state),
+        selectedPosts: selectedPostsSelector(state), // <-- Error occurs HERE!
     }
 }
 
